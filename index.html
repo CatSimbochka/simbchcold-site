@@ -32,30 +32,43 @@
         </nav>
 
         <div class="hero-center">
-            <img class="big-logo" src="images/5.jpg">
-            <h1>SIMBCHCOLD</h1>
 
-            <div class="online-card">
-                <div class="status">
-                    <span class="glow-point"></span> ONLINE
-                </div>
-                <div class="players">
-                    <span id="players">--</span> / 20 игроков
-                </div>
-                <div class="ip" onclick="copyIP()" title="Нажмите, чтобы скопировать">
-                    simbchcold.c6t.ru
-                </div>
-                <button class="copy-btn" onclick="copyIP()">
-                    СКОПИРОВАТЬ IP
-                </button>
-            </div>
+    <img class="big-logo" src="images/5.jpg">
 
-            <div class="buttons">
-                <a class="discord-btn" href="https://discord.gg/8Fvf4yFQcf">ДИСКОРД</a>
-                <!-- Кнопка рейтинга Millida -->
-                <a class="millida-btn" href="https://millida.net/rating/servers/simbchcold" target="_blank" rel="noopener" title="SimbchCold в рейтинге Millida">★ Мы в рейтинге Millida</a>
-            </div>
+    <h1>SIMBCHCOLD</h1>
+
+    <div class="online-card">
+        <div class="status">
+            <span class="glow-point"></span> ONLINE
         </div>
+
+        <div class="players">
+            <span id="players">--</span> / 20 игроков
+        </div>
+
+        <!-- Обновленный блок IP с эффектом наведения -->
+        <div class="ip" onclick="copyIP()" title="Нажмите, чтобы скопировать" style="cursor: pointer; transition: all 0.3s ease; display: inline-block; padding: 5px 10px; border-radius: 6px;" onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='scale(1.05)'" onmouseout="this.style.background='transparent'; this.style.transform='scale(1)'">
+            simbchcold.c6t.ru
+        </div>
+
+        <button class="copy-btn" onclick="copyIP()">
+            СКОПИРОВАТЬ IP
+        </button>
+    </div>
+
+    <!-- Исправленный блок кнопок -->
+    <div class="buttons">
+        <a class="discord-btn" href="https://discord.gg/8Fvf4yFQcf">
+            ДИСКОРД
+        </a>
+        
+        <!-- Кнопка Millida (стили добавлены напрямую, чтобы она железно была кнопкой) -->
+        <a class="millida-btn" href="https://millida.net/rating/servers/simbchcold" target="_blank" rel="noopener" title="SimbchCold в рейтинге Millida" style="display: inline-flex !important; align-items: center; justify-content: center; gap: 6px; padding: 12px 24px; border-radius: 10px; background: #5ec64d !important; color: #0b0b0c !important; font-weight: 700; font-size: 14px; text-transform: uppercase; text-decoration: none; min-width: 240px; box-sizing: border-box; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(94, 198, 77, 0.3);">
+            ★ Мы в рейтинге Millida
+        </a>
+    </div>
+
+</div>
     </header>
 
     <section id="server" class="section-padding">
