@@ -1,136 +1,38 @@
-<!DOCTYPE html>
-<html lang="ru">
+<div class="hero-center">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SimbchCold | Майнкрафт выживание</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <img class="big-logo" src="images/5.jpg">
 
-<body>
+    <h1>SIMBCHCOLD</h1>
 
-    <div class="loader">
-        <img src="images/5.jpg">
-        <h2>SimbchCold</h2>
-        <p>Загрузка...</p>
+    <div class="online-card">
+        <div class="status">
+            <span class="glow-point"></span> ONLINE
+        </div>
+
+        <div class="players">
+            <span id="players">--</span> / 20 игроков
+        </div>
+
+        <!-- Обновленный блок IP с эффектом наведения -->
+        <div class="ip" onclick="copyIP()" title="Нажмите, чтобы скопировать" style="cursor: pointer; transition: all 0.3s ease; display: inline-block; padding: 5px 10px; border-radius: 6px;" onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='scale(1.05)'" onmouseout="this.style.background='transparent'; this.style.transform='scale(1)'">
+            simbchcold.c6t.ru
+        </div>
+
+        <button class="copy-btn" onclick="copyIP()">
+            СКОПИРОВАТЬ IP
+        </button>
     </div>
 
-    <canvas id="particles"></canvas>
+    <!-- Исправленный блок кнопок -->
+    <div class="buttons">
+        <a class="discord-btn" href="https://discord.gg/8Fvf4yFQcf">
+            ДИСКОРД
+        </a>
+        
+        <!-- Кнопка Millida (стили добавлены напрямую, чтобы она железно была кнопкой) -->
+        <a class="millida-btn" href="https://millida.net/rating/servers/simbchcold" target="_blank" rel="noopener" title="SimbchCold в рейтинге Millida" style="display: inline-flex !important; align-items: center; justify-content: center; gap: 6px; padding: 12px 24px; border-radius: 10px; background: #5ec64d !important; color: #0b0b0c !important; font-weight: 700; font-size: 14px; text-transform: uppercase; text-decoration: none; min-width: 240px; box-sizing: border-box; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(94, 198, 77, 0.3);">
+            ★ Мы в рейтинге Millida
+        </a>
+    </div>
 
-    <header class="hero">
-        <nav>
-            <div class="logo">
-                <img src="images/5.jpg">
-                <span>SimbchCold</span>
-            </div>
-            <div class="nav-links">
-                <a href="#server">Сервер</a>
-                <a href="#gallery">Галерея</a>
-                <a href="https://discord.gg/8Fvf4yFQcf">Discord</a>
-            </div>
-        </nav>
-
-        <div class="hero-center">
-            <img class="big-logo" src="images/5.jpg">
-            <h1>SIMBCHCOLD</h1>
-
-            <div class="online-card">
-                <div class="status">
-                    <span class="glow-point"></span> ONLINE
-                </div>
-                <div class="players">
-                    <span id="players">--</span> / 20 игроков
-                </div>
-                <div class="ip" onclick="copyIP()" title="Нажмите, чтобы скопировать">
-                    simbchcold.c6t.ru
-                </div>
-                <button class="copy-btn" onclick="copyIP()">
-                    СКОПИРОВАТЬ IP
-                </button>
-            </div>
-
-            <div class="buttons">
-                <a class="discord-btn" href="https://discord.gg/8Fvf4yFQcf">ДИСКОРД</a>
-                <!-- Кнопка рейтинга Millida -->
-                <a class="millida-btn" href="https://millida.net/rating/servers/simbchcold" target="_blank" rel="noopener" title="SimbchCold в рейтинге Millida">★ Мы в рейтинге Millida</a>
-            </div>
-        </div>
-    </header>
-
-    <section id="server" class="section-padding">
-        <h2 class="section-title">ИНФОРМАЦИЯ</h2>
-        <div class="info-grid">
-            <div class="info">
-                <h3>Майнкрафт</h3>
-                <p>Java Edition</p>
-            </div>
-            <div class="info">
-                <h3>Версия</h3>
-                <p>1.21.11</p>
-            </div>
-            <div class="info">
-                <h3>Тип</h3>
-                <p>Выживание</p>
-            </div>
-            <div class="info">
-                <h3>Игроков</h3>
-                <p>0-20</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-padding alternative-bg">
-        <h2 class="section-title">Почему мы?</h2>
-        <div class="features">
-            <div class="feature-card">
-                <div class="feature-icon">🌎</div>
-                <h3>Создавай свою историю</h3>
-                <p>Полная свобода действий, продуманный мир и отзывчивое комьюнити.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">⚡</div>
-                <h3>Стабильная игра</h3>
-                <p>Мощное железо гарантирует высокий TPS и полное отсутствие лагов.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🛡</div>
-                <h3>Честный сервер</h3>
-                <p>Никакой продажной админки, креативок и ломающего баланс доната.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🤝</div>
-                <h3>Играй вместе</h3>
-                <p>Объединяйся в кланы, строй города и заводи верных друзей.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="gallery" class="section-padding">
-        <h2 class="section-title">GALLERY</h2>
-        <div class="gallery-container">
-            <img class="banner" src="images/6.jpg">
-            <div class="photos">
-                <div class="photo-wrapper"><img src="images/1.jpg"></div>
-                <div class="photo-wrapper"><img src="images/2.jpg"></div>
-                <div class="photo-wrapper"><img src="images/3.jpg"></div>
-                <div class="photo-wrapper"><img src="images/4.jpg"></div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-padding alternative-bg">
-        <h2 class="section-title">ДОСТИЖЕНИЯ ИГРОКОВ</h2>
-        <div class="achievement">
-            <div class="lock-icon">🔒</div>
-            <span>Секретные достижения станут доступны со стартом сезона. Скоро...</span>
-        </div>
-    </section>
-
-    <footer>
-        <p>SimbchCold © 2026. Все права защищены.</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+</div>
